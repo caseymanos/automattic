@@ -8,6 +8,8 @@ on:
 
 env:
   NODE_VERSION: '20'
+  # Work around npm optional-deps bug with Rollup native bindings on CI
+  ROLLUP_SKIP_NODEJS_NATIVE: '1'
 
 jobs:
   deploy:
