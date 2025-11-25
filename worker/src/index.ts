@@ -75,7 +75,7 @@ export default {
       const result = await streamText({
         model: selection.model,
         messages,
-        maxOutputTokens: 900,
+        maxTokens: 900,
         temperature: selection.variant === 'fast' ? 0.15 : 0.2,
         topP: 0.9,
       })
@@ -205,11 +205,11 @@ function formatUserPrompt(payload: ReviewPayload, latestPrompt: string): string 
     `Language: ${payload.language}`,
     `Selected ${rangeLabel}:\n\n\`\`\`${inferFence(payload.language)}\n${trimmedSelection}\n\`\`\``,
     `Nearby context:\n\n\`\`\`${inferFence(payload.language)}\n${surround}\n\`\`\``,
-    'Please respond with:
+    `Please respond with:
 1. High-level summary (2 bullet points max)
 2. Detailed findings grouped by category (correctness, performance, accessibility, WP/editor UX)
 3. Specific code suggestions with snippets when applicable
-4. Quick wins that can be auto-fixed',
+4. Quick wins that can be auto-fixed`,
   ].join('\n\n')
 }
 
