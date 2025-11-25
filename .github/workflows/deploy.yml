@@ -29,16 +29,8 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
 
-      - name: Install root dependencies
+      - name: Install all dependencies
         run: npm ci
-
-      - name: Install app dependencies
-        run: npm ci
-        working-directory: app
-
-      - name: Install worker dependencies
-        run: npm ci
-        working-directory: worker
 
       - name: Lint application
         run: npm run lint:app
