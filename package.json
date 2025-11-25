@@ -1,0 +1,20 @@
+{
+  "name": "inline-review",
+  "private": true,
+  "workspaces": [
+    "app",
+    "worker"
+  ],
+  "scripts": {
+    "dev:app": "npm --prefix app run dev",
+    "build:app": "npm --prefix app run build",
+    "lint:app": "npm --prefix app run lint",
+    "dev:worker": "npm --prefix worker run dev",
+    "deploy:worker": "npm --prefix worker run deploy",
+    "deploy:app": "vercel deploy --cwd app --prod --yes",
+    "deploy": "npm run build:app && npm run deploy:worker && npm run deploy:app"
+  },
+  "devDependencies": {
+    "vercel": "^48.10.11"
+  }
+}

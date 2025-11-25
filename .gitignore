@@ -1,0 +1,30 @@
+# Node and build artifacts
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment / secrets
+.env*
+.dev.vars
+*.pem
+
+# Tooling
+.vercel/
+.wrangler/
+
+# OS / editor cruft
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Generated artifacts under packages
+app/dist/
+worker/dist/
+worker/.dev.vars

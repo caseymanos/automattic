@@ -1,0 +1,12 @@
+# Worker local development secrets (copy to .dev.vars and fill real keys)
+OPENAI_API_KEY=sk-openai-example
+OPENAI_MODEL=o4-mini
+
+ANTHROPIC_API_KEY=sk-anthropic-example
+ANTHROPIC_MODEL=claude-3-5-sonnet-latest
+
+OPENROUTER_API_KEY=sk-or-v1-example
+OPENROUTER_MODEL=openrouter/meta-llama-3.1-70b-instruct
+OPENROUTER_SITE_URL=http://localhost:5173
+OPENROUTER_APP_NAME=Inline Code Review Assistant
+OPENROUTER_BASE_URL=https://openrouter.ai/api/v1

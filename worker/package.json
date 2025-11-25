@@ -1,0 +1,20 @@
+{
+  "name": "edge-review-worker",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler publish src/index.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^0.0.34",
+    "@ai-sdk/openai": "^0.0.42",
+    "ai": "^3.2.18"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241112.0",
+    "typescript": "~5.9.3",
+    "wrangler": "^3.101.0"
+  }
+}
