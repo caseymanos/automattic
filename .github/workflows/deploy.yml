@@ -30,14 +30,14 @@ jobs:
           cache: 'npm'
 
       - name: Install root dependencies
-        run: npm install
+        run: npm ci
 
       - name: Install app dependencies
-        run: npm install
+        run: npm ci
         working-directory: app
 
       - name: Install worker dependencies
-        run: npm install
+        run: npm ci
         working-directory: worker
 
       - name: Lint application
