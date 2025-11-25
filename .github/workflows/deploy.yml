@@ -29,7 +29,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install all dependencies
-        run: npm ci --include=optional
+        run: npm ci && npm install @rollup/rollup-linux-x64-gnu --save-optional --prefix app
 
       - name: Lint application
         run: npm run lint:app
